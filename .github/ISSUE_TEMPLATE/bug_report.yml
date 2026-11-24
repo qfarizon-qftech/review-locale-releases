@@ -1,0 +1,53 @@
+name: Signaler un bug
+description: Décrire un problème reproductible dans Revue locale.
+title: "[Bug] "
+body:
+  - type: input
+    id: app-version
+    attributes:
+      label: Version de l’application
+      description: Indiquez la version affichée dans le nom du téléchargement ou de l’application.
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: os-architecture
+    attributes:
+      label: Système et architecture
+      description: Indiquez le système d’exploitation et l’architecture (par exemple Windows 11 x64, macOS Apple Silicon, Linux x64).
+      placeholder: macOS 15 Apple Silicon
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Décrivez les actions nécessaires pour observer le problème.
+      placeholder: |
+        1. Ouvrir...
+        2. Sélectionner...
+        3. Observer...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu
+      description: Décrivez ce qui devait se passer.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Résultat observé
+      description: Décrivez ce qui s’est effectivement passé.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Journaux facultatifs
+      description: Collez ici les journaux utiles. Ne joignez aucune donnée personnelle, information secrète ou portion de code confidentielle.
+      render: text
+    validations:
+      required: false
