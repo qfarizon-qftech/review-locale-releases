@@ -1,0 +1,25 @@
+name: Proposer une amélioration
+description: Décrire une amélioration utile pour Revue locale.
+title: "[Amélioration] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Besoin ou problème
+      description: Quelle situation souhaitez-vous améliorer ?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposition
+      description: Décrivez le comportement ou la solution souhaitée.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte complémentaire
+      description: Ajoutez uniquement les détails utiles à la compréhension de la demande.
+    validations:
+      required: false
